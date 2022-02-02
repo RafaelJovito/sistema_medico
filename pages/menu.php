@@ -55,13 +55,13 @@
                         <div class="nav">
 
                             <div class="sb-sidenav-menu-heading">Gerencial</div>
-                            <a class="nav-link" href="../importar/lancarPaciente.php">
-                                <div class="sb-nav-link-icon"><i class="fa fa-upload"></i></div>
-                                Importação
-                            </a>
                             <a class="nav-link" href="../gerencial/pacientes.php">
                                 <div class="sb-nav-link-icon"><i class="fa fa-address-card"></i></div>
                                 Pacientes
+                            </a>
+                            <a class="nav-link" href="../importar/lancarPaciente.php">
+                                <div class="sb-nav-link-icon"><i class="fa fa-upload"></i></div>
+                                Importação
                             </a>
                         
                             <?php if($idfuncao == 1){ ?>

@@ -58,16 +58,16 @@ while( $row = $result->fetch_assoc() ) {
 	$dado[] =  $row["nome"];
 
 	//Máscara telefone
-	if(empty($row["telefone"])){
-		$phone = ["Sem telefone"];
-	}if(!empty($number = $row["telefone"])){
-		$phone = sprintf("(%s) %s-%s",
-		  substr($number, 0, 2),
-		  substr($number, 2, 5),
-		  substr($number, 7));
-	}
+	// if(empty($row["telefone"])){
+	// 	$phone = ["Sem telefone"];
+	// }if(!empty($number = $row["telefone"])){
+	// 	$phone = sprintf("(%s) %s-%s",
+	// 	  substr($number, 0, 2),
+	// 	  substr($number, 2, 5),
+	// 	  substr($number, 7));
+	// }
 	
-	$dado[] =  $phone;
+	$dado[] =  $row["telefone"];
 	$dado[] =  $row["email"];
 	$dado[] =  $row["funcao"];
 	$dado [] = '<button type="button" id="btnEditar" class="btn btn btn-primary" data-id="'.$row["idusuario"].'"><i class="fa fa-pen">&nbsp;</i> Editar</button>';

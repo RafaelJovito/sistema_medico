@@ -61,16 +61,16 @@ while( $row_usuarios = $result->fetch_assoc() ) {
 		$dado[] =  $row_usuarios["idade"] ;
 
 		//Máscara telefone
-		if(empty($row_usuarios["telefone"])){
-			$phone = ["Sem telefone"];
-		}if(!empty($number = $row_usuarios["telefone"])){
-			$phone = sprintf("(%s) %s-%s",
-		 	 substr($number, 0, 2),
-		  	substr($number, 3, 5),
-		 	 substr($number, 4, 4));
-		}
+		// if(empty($row_usuarios["telefone"])){
+		// 	$phone = ["Sem telefone"];
+		// }if(!empty($number = $row_usuarios["telefone"])){
+		// 	$phone = sprintf("(%s) %s-%s",
+		//  	 substr($number, 1, 2),
+		//   	substr($number, 3, 5),
+		//  	 substr($number, 4, 4));
+		// }
 		
-		$dado[] = $phone;
+		$dado[] = $row_usuarios["telefone"];
 		$dado[] = $row_usuarios["matricula"];	
 		
 		$dado[] = '<button  type="button" id="btnVisualizar" class="btn btn-secondary" data-id="'.$row_usuarios["idpaciente"].'"><i class="fa fa-search" style="font-size: 0.9rem"></i> Visualizar</button>';
